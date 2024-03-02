@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/react": "^7.6.17",
+    "@storybook/react-vite": "^7.6.17",
+    "@storybook/test": "^7.6.17",
+    "@storybook/test-runner": "^0.16.0",
+    "http-server": "^14.1.1",
+    "is-ci": "^3.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.17"
+  },
+  "engines": {
+    "node": "20",
+    "npm": "10"
+  },
+  "private": true,
+  "scripts": {
+    "build-storybook": "storybook build",
+    "prepare": "is-ci || npx playwright install chromium firefox webkit",
+    "storybook": "storybook dev -p 6006",
+    "test": "test-storybook"
+  }
+}
